@@ -4,17 +4,18 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/> <!--会把路由相关的内容渲染在这里，在index.js里面看路由信息-->
-
-    <div>
-      <h1>{{msg}}</h1>
-    </div>
+    <div><h1>{{msg}}</h1></div>
     <!--page1为组件-->
-    <page1></page1>
+<!--    <page1></page1>-->
+<!--    <page2></page2>循环-->
+    <page3></page3>
   </div>
 </template>
 
 <script>
 import Page1 from './components/Page1'
+import Page2 from './components/Page2'
+import Page3 from './components/Page3'
 
 export default {
   name: 'App',
@@ -23,8 +24,9 @@ export default {
       msg: '这个逻辑。'
     }
   },
-  components: {Page1}
+  components: {Page3, Page2, Page1}
 }
+
 </script>
 
 <!--样式代码-->
